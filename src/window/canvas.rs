@@ -159,8 +159,8 @@ impl Window {
         self.add_touchstart_event_listener(input.clone())?;
         self.add_touchend_event_listener(input.clone())?;
         self.add_touchmove_event_listener(input.clone())?;
-        self.add_key_down_event_listener(input.clone())?;
-        self.add_key_up_event_listener(input.clone())?;
+        // self.add_key_down_event_listener(input.clone())?;
+        // self.add_key_up_event_listener(input.clone())?;
 
         let input_clone = input.clone();
         input.borrow_mut().render_loop_closure = Some(Closure::wrap(Box::new(move || {
